@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93333 270.93334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/buck/src/voidrot/tool-deck/images/logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="1024px"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="122.79568"
+     inkscape:cy="560.61693"
+     inkscape:window-width="3072"
+     inkscape:window-height="1659"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.691618;image-rendering:auto;fill-opacity:1"
+       id="path31"
+       cx="135.46666"
+       cy="135.46666"
+       r="135.46666" />
+    <path
+       d="M 71.966641,50.8 69.85,55.141878 92.074999,68.167521 c 0,10.8547 -4.233358,19.538461 -13.758358,24.965812 L 56.091642,80.107691 55.033317,82.278632 c 5.291683,16.282052 15.875008,27.136748 37.041682,27.136748 5.291642,0 21.166641,16.28205 29.633321,24.96582 l 16.93333,-17.36753 C 130.17501,108.32992 111.12501,88.791452 111.12501,83.364102 111.12501,63.825641 105.83332,50.8 71.966641,50.8 Z m 132.291689,5.427352 -21.16668,15.196579 -2.11664,8.68376 -61.38337,62.957269 -8.46663,-5.42735 -4.23337,4.34187 c 0,13.02564 -14.816641,19.53847 -21.166641,19.53847 L 50.8,197.33846 c 0,10.8547 11.641641,22.79487 22.225,22.79487 l 34.92501,-35.82052 c 0,-6.51281 6.35,-21.7094 19.05,-21.7094 l 4.23331,-4.34187 -5.29167,-8.68377 61.38336,-62.957258 8.46664,-2.17094 14.81668,-21.7094 z m -52.91668,73.811958 -16.93333,17.36753 c 12.7,13.02564 29.63333,30.39316 29.63333,35.82051 0,19.53846 5.29168,32.56411 39.15836,32.56411 l 2.11664,-4.34189 -22.225,-13.02564 c 0,-10.8547 4.23336,-19.53847 13.75836,-24.96581 l 22.225,13.02564 1.05832,-2.17095 c -5.29168,-16.28205 -15.875,-27.13675 -37.04168,-27.13675 -5.29164,0 -19.05,-14.1111 -31.75,-27.13675 z"
+       id="path1152"
+       style="fill:#32cd32;fill-opacity:1;stroke:none;stroke-width:1.07182;stroke-opacity:1" />
+  </g>
+</svg>
