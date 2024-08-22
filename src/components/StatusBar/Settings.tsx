@@ -23,31 +23,22 @@ const Settings = () => {
   const {colorMode} = useColorMode()
   const {isOpen, onOpen, onClose} = useDisclosure()
   const btnRef = useRef()
-
-  const getLocalIp = (): string => {
-    let ip: unknown = ''
-    invoke('get_local_ip').then(res => {
-      ip = res
-      console.log(res)
-    })
-
-    if (typeof ip !== 'string') {
-      return ''
-    } else {
-      return ip
-    }
-  }
-  const [ipAddress, setIpAddress] = useState<string | unknown>()
+  const [ipAddress, setIpAddress] = useState<string>('Loading...')
 
   useEffect(() => {
     const interval = setInterval(() => {
       invoke('get_local_ip').then(res => {
-        setIpAddress(res)
+        if (typeof res === 'string') {
+          setIpAddress(res)
+        } else {
+          setIpAddress('Error')
+        }
       })
     }, 10000)
     return () => clearInterval(interval)
-  }, [setIpAddress, getLocalIp])
+  }, [setIpAddress])
 
+  // @ts-ignore
   return (
     <Box>
       <Button

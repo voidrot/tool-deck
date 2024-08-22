@@ -3,3 +3,25 @@ node = "20"
 
 [env]
 _.file = ".env"
+
+[tasks."lint:typos"]
+run = "typos --locale en-us --diff ./src-tauri"
+
+[tasks."lint:outdated"]
+run = "cargo outdated -m ./src-tauri/Cargo.toml"
+
+[tasks."lint:clippy"]
+run = "cargo clippy ./src-tauri"
+
+[tasks."fmt:fix"]
+run = "cargo fmt -v ./src-tauri"
+
+[tasks."cargo:fix"]
+run = "cargo fix ./src-tauri --allow-dirty --allow-staged"
+
+[tasks."fmt"]
+depends = ["fmt:*", "cargo:fix"]
+
+
+[tasks."lint"]
+depends = ["lint:typos", "lint:outdated", "lint:clippy", "fmt"]
