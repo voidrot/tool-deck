@@ -37,6 +37,7 @@ $RECYCLE.BIN/
 .nfs*
 out
 gen
+!app/src-tauri/gen/
 **/dist/
 *.7z
 *.jar
