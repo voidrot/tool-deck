@@ -1,0 +1,6 @@
+[tools]
+node = "lts"
+
+[env]
+SCCACHE_C_CUSTOM_CACHE_BUSTER = "tool-deck"
+RUSTFLAGS = "-D warnings -C target-cpu=native"

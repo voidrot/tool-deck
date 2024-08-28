@@ -1,0 +1,5 @@
+[build.env]
+volumes = ["ICONS_VOLUME", "DIST_VOLUME", "ISOLATION_VOLUME"]
+
+[target.aarch64-unknown-linux-gnu]
+image = "aarch64-unknown-linux-gnu:latest"

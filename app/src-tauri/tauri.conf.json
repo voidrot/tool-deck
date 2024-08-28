@@ -1,0 +1,56 @@
+{
+  "productName": "tool-deck",
+  "version": "0.1.0",
+  "identifier": "com.buckbrady.tool-deck.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "tool-deck",
+        "width": 800,
+        "height": 600,
+        "visible": false
+      },
+      {
+        "label": "splashscreen",
+        "title": "loading",
+        "url": "splashscreen.html",
+        "width": 400,
+        "height": 350,
+        "decorations": false,
+        "resizable": false,
+        "fullscreen": false,
+        "center": true,
+        "maximizable": false,
+        "minimizable": false,
+        "alwaysOnTop": true,
+        "hiddenTitle": true
+      }
+    ],
+    "security": {
+      "capabilities": [
+        "default",
+        "desktop",
+        "mobile"
+      ],
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
