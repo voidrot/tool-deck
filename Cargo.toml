@@ -12,10 +12,10 @@ log = "0.4"
 
 [profile.dev]
 opt-level = 0
-incremental = true
-lto = true
-debug = 0
-strip = "debuginfo"
+#incremental = false
+#lto = true
+#debug = 0
+#strip = "debuginfo"
 #split-debuginfo = "unpacked"
 
 [profile.release]

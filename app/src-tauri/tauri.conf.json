@@ -9,6 +9,8 @@
     "frontendDist": "../dist"
   },
   "app": {
+    "enableGTKAppId": true,
+    "macOSPrivateApi": true,
     "windows": [
       {
         "label": "main",
@@ -30,16 +32,24 @@
         "maximizable": false,
         "minimizable": false,
         "alwaysOnTop": true,
-        "hiddenTitle": true
+        "hiddenTitle": true,
+        "shadow": true
       }
     ],
+    "trayIcon": {
+      "iconPath": "icons/icon.ico",
+      "id": "tool-deck",
+      "title": "Tool Deck",
+      "tooltip": "Tool Deck"
+    },
     "security": {
       "capabilities": [
-        "default",
-        "desktop",
-        "mobile"
+        "default"
       ],
-      "csp": null
+      "csp": null,
+      "pattern": {
+        "use": "brownfield"
+      }
     }
   },
   "bundle": {
@@ -51,6 +61,67 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "createUpdaterArtifacts": false,
+    "linux": {
+      "appimage": {
+        "bundleMediaFramework": false,
+        "files": {}
+      },
+      "deb": {
+        "files": {}
+      },
+      "rpm": {
+        "epoch": 0,
+        "files": {},
+        "release": "1"
+      }
+    },
+    "macOS": {
+      "dmg": {
+        "appPosition": {
+          "x": 180,
+          "y": 170
+        },
+        "applicationFolderPosition": {
+          "x": 480,
+          "y": 170
+        },
+        "windowSize": {
+          "height": 400,
+          "width": 660
+        }
+      },
+      "files": {},
+      "hardenedRuntime": true,
+      "minimumSystemVersion": "10.13"
+    }
+  },
+  "plugins": {
+    "cli": {
+      "description": "Tool Deck CLI Example",
+      "args": [
+        {
+          "short": "v",
+          "name": "verbose",
+          "description": "Verbosity level"
+        }
+      ],
+      "subcommands": {
+        "run": {
+          "description": "Run the application",
+          "args": [
+            {
+              "name": "debug",
+              "description": "Run application in debug mode"
+            },
+            {
+              "name": "release",
+              "description": "Run application in release mode"
+            }
+          ]
+        }
+      }
+    }
   }
 }
