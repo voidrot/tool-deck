@@ -1,6 +1,14 @@
 [package]
-name = "server"
+name = "tool-deck-server"
 version = "0.1.0"
 edition = "2021"
+rust-version = { workspace = true }
+license = "GPL-3.0-or-later"
+authors = ["you"]
+description = "Tool Deck API and Relay Server"
 
 [dependencies]
+tokio = { workspace = true, features = ["io-std", "macros", "net", "rt-multi-thread", "time"] }
+futures-channel = { workspace = true }
+futures-util = { workspace = true }
+tokio-tungstenite = { workspace = true }

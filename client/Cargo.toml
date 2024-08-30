@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+tokio = { workspace = true, features = ["io-std", "macros", "net", "rt-multi-thread", "time"] }
+futures-channel = { workspace = true }
+futures-util = { workspace = true }
+tokio-tungstenite = { workspace = true }
+tungstenite = "0.24.0"

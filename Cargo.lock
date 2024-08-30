@@ -727,6 +727,13 @@ checksum = "1462739cb27611015575c0c11df5df7601141071f07518d56fcc1be504cbec97"
 [[package]]
 name = "client"
 version = "0.1.0"
+dependencies = [
+ "futures-channel",
+ "futures-util",
+ "tokio",
+ "tokio-tungstenite",
+ "tungstenite 0.24.0",
+]
 
 [[package]]
 name = "cocoa"
@@ -4226,10 +4233,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "server"
-version = "0.1.0"
-
-[[package]]
 name = "servo_arc"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4797,9 +4800,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-autostart"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "25958a42daab7aaff4faff15cbaffd5505873a0654e6382c74fca1729a791898"
+checksum = "992fef0cc6ef3637a8b336c9bf9758b8e718db934afd744846422c1da877dac0"
 dependencies = [
  "auto-launch",
  "log",
@@ -4812,9 +4815,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-cli"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d337eaa0940918481921da290669f6d9d803b174c1345012281149ff40424d5c"
+checksum = "e6f4339e42e7252629d1b7474e6385c0a3f07a9845ccfb181dd5771e927394bb"
 dependencies = [
  "clap",
  "log",
@@ -4827,9 +4830,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-dialog"
-version = "2.0.0-rc.2"
+version = "2.0.0-rc.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23f9acd91025e9b624969422e4c707f7cdcded6de66aa0559bc4d91339753cc2"
+checksum = "aa8bd381f75c47687f41fb603f67fdd99a1af377da22d03d8fb959d2481845c1"
 dependencies = [
  "dunce",
  "log",
@@ -4841,13 +4844,14 @@ dependencies = [
  "tauri-plugin",
  "tauri-plugin-fs",
  "thiserror",
+ "url",
 ]
 
 [[package]]
 name = "tauri-plugin-fs"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5df6b25b1f2b7b61565e66c4dbee9eb39e5635d2a763206e380e07cc3f601a67"
+checksum = "694a746b0e0c1d318198fabf4957800c42fb4b705e866e0eed7ec21476ef88db"
 dependencies = [
  "anyhow",
  "glob",
@@ -4864,9 +4868,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-http"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1eef17218eaa8bd0fc6cafb7831c63d82ef83b3950d59dc817d92d5320c4f20c"
+checksum = "7953c340b866393dc9935612ecabf2db361ebe0f39df020228021eaffe971b9b"
 dependencies = [
  "data-url",
  "http",
@@ -4886,9 +4890,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-log"
-version = "2.0.0-rc.1"
+version = "2.0.0-rc.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9537844ef72ea15d69819d638569ae0fbbcd8a77111a1cf6ef4428bd90bae2c3"
+checksum = "b57e4666c4a5d81f81b7bb8eacf51ae32c4e69c35071aabb480ad20a80836e4e"
 dependencies = [
  "android_logger",
  "byte-unit",
@@ -4908,9 +4912,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-notification"
-version = "2.0.0-rc.2"
+version = "2.0.0-rc.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "518b8a37552adef7c2dea4dd23739f9299dc044306321b0aee575b1a256d1b2c"
+checksum = "6bf32fba3a2650f89c7dfc532b38de566a37779e482f07dccabf45fe24444e26"
 dependencies = [
  "log",
  "notify-rust",
@@ -4927,9 +4931,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-os"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b54cfeb26356822d3be3db4282041b03552f573a694b6b28aded7d95c62a039"
+checksum = "ebc4ee761edd532fce2232453e9c8e0f7d9c0b6fe125c4b90b3eb4362ee84224"
 dependencies = [
  "gethostname",
  "log",
@@ -4945,9 +4949,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-positioner"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "581c8e4d65faebaf584fd2d7d7c7602c27ae458d9362566ee29c4ed6fa6eae40"
+checksum = "2e50975fb5ed92c5f80c6cca758bcaf7f2139cd96df7c039067f9c2cd6f4121a"
 dependencies = [
  "log",
  "serde",
@@ -4960,9 +4964,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-process"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96d3663df0cd3e96feb37d46aad5d499d2edfcca5c62548ad34f1684e0019168"
+checksum = "9c9eb80b601682dcbd45dc5ed5f7cc214f1d994aeea730d500899cc616784559"
 dependencies = [
  "tauri",
  "tauri-plugin",
@@ -4970,9 +4974,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-shell"
-version = "2.0.0-rc.2"
+version = "2.0.0-rc.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46315cccdbc7686bfb9f17e4aab757e5bb50118bc42e52784cae3917c59ac4d7"
+checksum = "e83800ddf78b820172efb5ed7310344e8e4f97fd30cd8237a3f20c12a79eb136"
 dependencies = [
  "encoding_rs",
  "log",
@@ -4991,24 +4995,24 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-single-instance"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de552151b4c9ba9ff72c7244dccaadd47f88d1f0d5caa2603c5c1c12b7636edc"
+checksum = "d73c92c98d44d4daba0118d905f45243dfcd6eaac82216c3382a02d17cb74cf2"
 dependencies = [
  "log",
  "serde",
  "serde_json",
  "tauri",
  "thiserror",
- "windows-sys 0.52.0",
+ "windows-sys 0.59.0",
  "zbus",
 ]
 
 [[package]]
 name = "tauri-plugin-store"
-version = "2.0.0-rc.2"
+version = "2.0.0-rc.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bfc658c2fe037e25e8af70d72ce2a757203be3fd8db13893fe872fa9847f9cac"
+checksum = "7e54ba1a0c0c60a6a08e711e184239f8a50354988b6fe1af8b5ce2215b2e79a2"
 dependencies = [
  "dunce",
  "log",
@@ -5036,9 +5040,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-updater"
-version = "2.0.0-rc.1"
+version = "2.0.0-rc.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8dfd104b50e1c17998fc131edd21ced948a9605bac7eb6827f94e099a644f924"
+checksum = "f7048854b4271f3bc58ee850f0582f8d9bb0190118afa8397f36fc260daaa68b"
 dependencies = [
  "base64 0.22.1",
  "dirs 5.0.1",
@@ -5065,9 +5069,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-websocket"
-version = "2.0.0-rc.0"
+version = "2.0.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f6a35f64f9cc7624a2645498825fcb91bab912c3e7450500ae8c363e5afdbfdf"
+checksum = "0559ff75acabdd8a2d1bc1dee480d65d6760fd3b758916ff19db0bc1c1f19d7e"
 dependencies = [
  "futures-util",
  "http",
@@ -5351,7 +5355,7 @@ dependencies = [
  "rustls-pki-types",
  "tokio",
  "tokio-rustls",
- "tungstenite",
+ "tungstenite 0.23.0",
  "webpki-roots",
 ]
 
@@ -5455,6 +5459,16 @@ dependencies = [
  "tauri-plugin-websocket",
  "tauri-utils",
  "tokio",
+]
+
+[[package]]
+name = "tool-deck-server"
+version = "0.1.0"
+dependencies = [
+ "futures-channel",
+ "futures-util",
+ "tokio",
+ "tokio-tungstenite",
 ]
 
 [[package]]
@@ -5587,6 +5601,24 @@ dependencies = [
  "rand 0.8.5",
  "rustls",
  "rustls-pki-types",
+ "sha1",
+ "thiserror",
+ "utf-8",
+]
+
+[[package]]
+name = "tungstenite"
+version = "0.24.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "18e5b8366ee7a95b16d32197d0b2604b43a0be89dc5fac9f8e96ccafbaedda8a"
+dependencies = [
+ "byteorder",
+ "bytes",
+ "data-encoding",
+ "http",
+ "httparse",
+ "log",
+ "rand 0.8.5",
  "sha1",
  "thiserror",
  "utf-8",
