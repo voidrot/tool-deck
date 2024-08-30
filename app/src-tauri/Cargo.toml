@@ -13,27 +13,36 @@ name = "tool_deck_lib"
 crate-type = ["lib", "cdylib", "staticlib"]
 
 [build-dependencies]
-tauri-build = { version = "2.0.0-rc", features = ["codegen"] }
+tauri-build = { version = "2.0.0-rc.7", features = ["codegen"] }
 
 [dependencies]
-tauri = { version = "2.0.0-rc", default-features = false, features = ["wry", "compression", "image-ico", "image-png", "tray-icon"] }
-tauri-plugin-shell = "2.0.0-rc"
-
+tauri = { version = "2.0.0-rc.7", features = [ "tray-icon", "macos-private-api", "wry", "linux-libxdo", "native-tls", "compression", "image-png", "image-ico", "objc-exception", "tauri-runtime-wry"] }
+tauri-plugin-shell = "2.0.0-rc.2"
+tauri-plugin-fs = "2.0.0-rc.0"
+tauri-plugin-log = { version = "2.0.0-rc.1", features = ["colored"] }
+tauri-plugin-notification = "2.0.0-rc.2"
+tauri-plugin-os = "2.0.0-rc.0"
+tauri-plugin-store = "2.0.0-rc.2"
+tauri-plugin-websocket = "2.0.0-rc.0"
+tauri-plugin-http = "2.0.0-rc.0"
+tauri-plugin-dialog = "2.0.0-rc.2"
+tauri-plugin-process = "2.0.0-rc"
+tauri-utils = "2.0.0-rc.7"
+tauri-plugin-system-info = "2.0.2"
+#tauri-plugin-network = "2.0.3-beta.1"
+# non-tauri dependencies
 serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
 log = { workspace = true }
-tauri-plugin-fs = "2.0.0-rc"
-tauri-plugin-log = "2.0.0-rc"
-tauri-plugin-notification = "2.0.0-rc"
-tauri-plugin-os = "2.0.0-rc"
-tauri-plugin-store = "2.0.0-rc"
+fix-path-env = { git = "https://github.com/tauri-apps/fix-path-env-rs" }
+tokio = "1.39.3"
 
 [features]
 prod = ["tauri/custom-protocol"]
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
-tauri-plugin-autostart = "2.0.0-rc"
+tauri-plugin-autostart = "2.0.0-rc.0"
 tauri-plugin-cli = "2.0.0-rc"
-tauri-plugin-positioner = "2.0.0-rc"
-tauri-plugin-single-instance = "2.0.0-rc"
-tauri-plugin-updater = "2.0.0-rc"
+tauri-plugin-positioner = { version = "2.0.0-rc.0", features = ["tray-icon"] }
+tauri-plugin-single-instance = "2.0.0-rc.0"
+tauri-plugin-updater = "2.0.0-rc.1"
